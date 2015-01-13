@@ -4,9 +4,12 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 
-gem "rails_12factor"
-gem "pg" 
-gem 'sqlite3'
+group :production do
+     gem "rails_12factor"
+end
+group :development, :test do
+     gem "sqlite3"
+end
 gem 'sass-rails', '~> 5.0'
 gem "execjs"
 gem "twitter-bootstrap-rails"
@@ -35,3 +38,5 @@ group :development, :test do
 
 
 end
+
+
